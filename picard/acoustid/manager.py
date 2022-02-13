@@ -50,6 +50,7 @@ class Submission(object):
         # payload approximation
         # the length of all submitted data, plus a small overhead to account for
         # potential urlencode expansion
+        print(self.args.items())
         return int(sum((len(key) + len(value) + 2 for key, value in self.args.items())) * 1.03)
 
     @property
